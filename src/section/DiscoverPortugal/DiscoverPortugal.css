@@ -1,0 +1,19 @@
+.discover-portugal {
+    .discover-portugal__item {
+        width: 100%;
+        height: 100vh;
+        padding: 5rem;
+        display: flex;
+        align-items: center;
+        gap: 6rem;
+        position: sticky;
+         * {
+            flex: 1 1 50%;
+        }
+    }
+    .discover-portugal__image {
+        width: 50%;
+        object-fit: cover;
+        background-color: black;
+    }
+}

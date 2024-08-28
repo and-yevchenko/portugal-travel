@@ -1,0 +1,16 @@
+.textbox {
+    text-align: center;
+    .textbox__title {
+        font-size: 3rem;
+        font-weight: 700;
+        letter-spacing: 0.2rem;
+        color: #034903;
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
+    .textbox__text {
+        font-size: 1.2rem;
+        letter-spacing: 0.1rem;
+    }
+}
