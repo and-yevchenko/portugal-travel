@@ -10,14 +10,13 @@ export const DiscoverPortugal = () => {
     return (
         <section className='discover-portugal'>
             <div className='sticky-container'>
-                {content.map((el, index) => (
+                {content.map((el) => (
                     <div className='discover-portugal__item' key={el.id}
                     style={{
                         backgroundColor: el.background,
-                        top: `${index + index}rem`
                     }}
                     >
-                        <Textbox title={el.title} text={el.text}/>
+                        <Textbox title={el.title} text={el.text} background={el.background}/>
                         <img className='discover-portugal__image' src={el.img} alt={el.alt} />
                     </div>
                 ))}
