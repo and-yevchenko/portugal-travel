@@ -1,9 +1,10 @@
 body {
   /* margin: 0; */
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 #app {
   background-color: #ffffff;
+  color: #000;
 }
 .main {
   /* width: 100vw; */

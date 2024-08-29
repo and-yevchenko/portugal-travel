@@ -1,4 +1,5 @@
 .textbox {
+    z-index: 1;
     text-align: center;
     .textbox__title {
         font-size: 3rem;
