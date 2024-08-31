@@ -1,0 +1,38 @@
+.stepper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0 auto;
+    .stepper__item {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        div {
+            content: "";
+            width: 29px;
+            height: 29px;
+            border-radius: 50%;
+            border: 3px solid grey;
+            /* background-color: grey;  */
+            position: relative;
+        }
+        p {
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 0.1rem;
+        }
+    }
+    .stepper__item:not(:last-child) div::after {
+            display: block;
+            position: absolute;
+            bottom: -32px; 
+            /* bottom: 0;  */
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 0 auto;
+            content: "";
+            background-color: grey;
+            width: 3px;
+            height: 32px;
+    }
+}
