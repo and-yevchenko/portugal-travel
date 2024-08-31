@@ -7,14 +7,15 @@
         display: flex;
         align-items: center;
         gap: 3rem;
-        div {
+        button {
             content: "";
-            width: 29px;
-            height: 29px;
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
-            border: 3px solid grey;
-            /* background-color: grey;  */
+            border: 3px solid #808080;
+            background-color: transparent; 
             position: relative;
+            transition: all 0.4s ease-out;
         }
         p {
             font-size: 1.2rem;
@@ -22,17 +23,29 @@
             letter-spacing: 0.1rem;
         }
     }
-    .stepper__item:not(:last-child) div::after {
+    .stepper__item:not(:first-child) button::after {
             display: block;
             position: absolute;
-            bottom: -32px; 
+            top: -35px; 
             /* bottom: 0;  */
             left: 50%;
             transform: translateX(-50%);
             margin: 0 auto;
             content: "";
-            background-color: grey;
+            background-color: #808080;
             width: 3px;
             height: 32px;
+            transition: all 0.4s ease-out;
+    }
+    .stepper__item.--active {
+        button {
+            background-color: #501313;
+            border: 3px solid #501313;
+            transition: all 0.4s ease-out;
+        }
+        &:not(:first-child) button::after {
+            background-color: #501313;
+            transition: all 0.4s ease-out;
+        }
     }
 }
