@@ -1,0 +1,50 @@
+.stepper {
+    --heightStep: 52px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0 auto;
+    position: relative;
+    .stepper__item {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        button {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            border: none;
+            background-color: #808080; 
+            position: relative;
+            transition: all 0.4s ease-out;
+            &:hover {
+                transform: translateY(-2px);
+            }
+        }
+        button::before {
+            display: block;
+            position: absolute;
+            top: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 0 auto;
+            content: "";
+            background-color: #808080;
+            width: 2px;
+            height: 70%;
+            transition: all 0.4s ease-out;
+        }
+        p {
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 0.1rem;
+        }
+    }
+    
+    .stepper__item.--active {
+        button {
+            background-color: #c50505;
+            transition: all 0.4s ease-out;
+        }
+    }
+}
