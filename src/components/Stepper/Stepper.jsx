@@ -1,11 +1,10 @@
-import { useState } from 'react';
 import { TRAVEL_PLAN } from '../../content/__travel-plan'
 import './Stepper.css'
 
-export const Stepper = () => {
+export const Stepper = ({ currentStep, setCurrentStep }) => {
     
     const steps = TRAVEL_PLAN.ITINERARY;
-    const [currentStep, setCurrentStep] = useState(1)
+    
 
     return (
         <div className='stepper'>
