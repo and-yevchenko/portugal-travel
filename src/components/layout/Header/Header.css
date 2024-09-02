@@ -2,4 +2,10 @@
     position: relative;
     width: 100vw;
     height: 100vh;
-  }
+    & .logo {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      z-index: 10;
+    }
+}
