@@ -15,6 +15,9 @@ export const Title = ({ children }) => {
     }, [])
 
     return (
-        <h1 ref={title} className='title'>{children}</h1>
+        <h1 ref={title} className='title'>
+            <span className='title__mini'>Travel with Horizon in</span>
+            {children}
+        </h1>
     )
 }
