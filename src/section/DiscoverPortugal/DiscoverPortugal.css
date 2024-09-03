@@ -1,4 +1,8 @@
 .discover-portugal {
+    .discover-portugal__title {
+        padding: 10rem 10rem 5rem 10rem;
+        border-bottom: 3px solid #034903;
+    }
     .discover-portugal__item {
         overflow: hidden;
         width: 100vw;
@@ -9,11 +13,12 @@
         gap: 6rem;
         position: sticky;
         top: 0;
-         * {
+        * {
             flex: 1 1 50%;
         }
     }
-    .textbox {
+    .discover-portugal__content {
+        z-index: 1;
         max-width: 45%;
         padding: 3rem;
     }

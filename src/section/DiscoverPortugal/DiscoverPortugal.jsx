@@ -5,22 +5,28 @@ import './DiscoverPortugal.css'
 
 export const DiscoverPortugal = () => {
 
-    const content = DISCOVER_PORTUGAL;
+    const CONTENT = DISCOVER_PORTUGAL
+    const CONTENT_SWIPPER = CONTENT.CONTENT;
 
     return (
         <section className='discover-portugal'>
-            <div className='sticky-container'>
-                {content.map((el) => (
+            <article className='discover-portugal__title'>
+                <Textbox title={CONTENT.TITLE} text={CONTENT.TEXT}/>
+            </article>
+            <article className='sticky-container'>
+                {CONTENT_SWIPPER.map((el) => (
                     <div className='discover-portugal__item' key={el.id}
                     style={{
                         backgroundColor: el.background,
                     }}
                     >
-                        <Textbox title={el.title} text={el.text} background={el.background}/>
+                        <div className='discover-portugal__content' style={{backgroundColor: `${el.background}`}}>
+                            <Textbox title={el.title} text={el.text} />
+                        </div>
                         <img className='discover-portugal__image' src={el.img} alt={el.alt} />
                     </div>
                 ))}
-            </div>
+            </article>
         </section>
     )
 }
