@@ -9,7 +9,7 @@ export const Stepper = ({ currentStep, setCurrentStep }) => {
     return (
         <div className='stepper'>
             {steps.map((step, i) => (
-                <div className={`stepper__item ${currentStep >= i + 1 && '--active'}`} 
+                <div className={`stepper__item${currentStep >= i + 1 ? ' --active' : ''}`} 
                      key={i}
                 >
                     <button onClick={() => setCurrentStep(i + 1)} type='button'></button>

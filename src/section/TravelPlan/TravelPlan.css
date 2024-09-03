@@ -1,6 +1,7 @@
 .travel-plan {
-    background-color: #fef2e4;
+    background-color: #e5edee;
     .travel-plan__text {
+        border-top: 3px solid #034903;
         padding: 10rem 10rem 5rem 10rem;
     }
     .travel-plan__content {

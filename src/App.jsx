@@ -1,21 +1,16 @@
 import './App.css'
 import { Header } from './components/layout/Header/Header'
-import { Logo } from './components/Logo/Logo'
 import { Parallax } from './components/Parallax/Parallax'
-import { Title } from './components/Title/Title'
 import { DiscoverPortugal } from './section/DiscoverPortugal/DiscoverPortugal'
 import { TravelPlan } from './section/TravelPlan/TravelPlan'
 
 
 function App() {
-  
+
   return (
     <div id='app'>
       <Header>
-        <a href="http://localhost:5173/"><Logo /></a>
-        <Parallax>
-          <Title>Portugal</Title>
-        </Parallax>
+        <Parallax />
       </Header>
       <main className='main'>
         <DiscoverPortugal />
