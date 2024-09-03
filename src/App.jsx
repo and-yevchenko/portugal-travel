@@ -1,6 +1,7 @@
 import './App.css'
 import { Header } from './components/layout/Header/Header'
 import { Parallax } from './components/Parallax/Parallax'
+import { About } from './section/About/About'
 import { DiscoverPortugal } from './section/DiscoverPortugal/DiscoverPortugal'
 import { FAQs } from './section/FAQs/FAQs'
 import { TravelPlan } from './section/TravelPlan/TravelPlan'
@@ -17,6 +18,7 @@ function App() {
         <DiscoverPortugal />
         <TravelPlan />
         <FAQs />
+        <About />
         <section className='three'></section>
       </main>
     </div>

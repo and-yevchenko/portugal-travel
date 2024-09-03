@@ -1,0 +1,64 @@
+.about {
+    background-color: #e5edee;
+    .about__info {
+        padding: 10rem 10rem 5rem 10rem;
+    }
+    .about__feedback {
+        padding: 3rem;
+        background-color: #fff;
+        width: 85%;
+        max-height: 500px;
+        margin: 0 auto;
+        border-top: 3px solid #034903;
+        border-bottom: 3px solid #034903;
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        overflow: hidden;
+    }
+    .about__text {
+        flex: 1 0 50%;
+        h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 0.2rem;
+            color: #000;
+        }
+    }
+    .about__card {
+        flex: 1 0 50%;
+    }
+}
+.card {
+    font-size: 0.8rem;
+    background-color: #fff;
+    border: 1px solid #8080809c;
+    border-radius: 16px;
+    padding: 1rem;
+    display: grid;
+    gap: 1rem;
+    align-items: center;
+    grid-template-areas: "photo name name name"
+                         "photo text text text"
+                         "photo rating rating rating";
+    .card__photo {
+        grid-area: photo;
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+    }
+    .card__name {
+        grid-area: name;
+        font-weight: 500;
+    }
+    .card__text {
+        grid-area: text;
+        display: inline-block;
+    }
+    .card__rating {
+        grid-area: rating;
+    }
+
+}
