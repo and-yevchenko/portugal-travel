@@ -1,0 +1,109 @@
+.about {
+    background-color: #e5edee;
+    .about__info {
+        padding: 10rem 10rem 5rem 10rem;
+    }
+    .about__feedback {
+        padding: 3rem;
+        background-color: #fff;
+        width: 85%;
+        max-height: 31.25rem;
+        height: 31.25rem; 
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        border-top: 3px solid #034903;
+        border-bottom: 3px solid #034903;
+    }
+    .about__text {
+        flex: 1 0 50%;
+        h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 0.2rem;
+            color: #000;
+        }
+    }
+    .about__clients {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        position: absolute;
+        width: 50%;
+        right: -1.5rem;
+        transition: all 3s ease-out;
+        top: calc(-1.5rem - 50%);
+    }
+}
+
+.card {
+    position: absolute;
+    max-height: auto;
+    width: 100%;
+    transition: all 1.5s ease-out;
+    font-size: 0.8rem;
+    background-color: #8080801a;
+    border: 2px solid #8080801a;
+    border-radius: 16px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    .card__info {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .card__photo {
+        grid-area: photo;
+        img {
+            height: 110px;
+            width: 110px;
+            border-radius: 50%;
+            object-fit: contain;
+        }
+    }
+    .card__name {
+        grid-area: name;
+        font-weight: 500;
+    }
+    .card__text {
+        grid-area: text;
+        display: inline-block;
+    }
+    .card__rating {
+        grid-area: rating;
+    }
+    &:nth-child(1) {
+        top: 0;
+        transform: translateX(60px);
+    }
+    &:nth-child(2) {
+        top: 150px;
+        transform: translateX(30px);
+    }
+    &:nth-child(3) {
+        top: 300px;
+        transform: translateX(0px);
+    }
+    &:nth-child(4) {
+        top: 450px;
+        border: 2px solid #034903;
+        transform: translateX(-30px);
+    }
+    &:nth-child(5) {
+        top: 600px;
+        transform: translateX(0px);
+    }
+    &:nth-child(6) {
+        top: 750px;
+        transform: translateX(30px);
+    }
+    &:nth-child(7) {
+        top: 900px;
+        transform: translateX(60px);
+    }
+}
