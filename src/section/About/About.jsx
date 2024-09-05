@@ -1,11 +1,24 @@
+import { useEffect, useRef } from 'react';
 import { Textbox } from '../../components/Textbox/Textbox'
 import { ABOUT } from '../../content/__about'
 import './About.css'
+import { Card } from './Card';
 
 export const About = () => {
 
     const CONTENT = ABOUT;
     const CARDS = CONTENT.FEEDBACK
+
+    const clients = useRef()
+    useEffect(() => {
+        const interval = setInterval(() => {
+            const lastCard = clients.current.lastChild
+            clients.current.prepend(lastCard)
+            console.log(clients.current);
+        }, 5000)
+    
+        return () => clearInterval(interval)
+    }, [])
 
     return (
         <section className='about'>
@@ -14,14 +27,9 @@ export const About = () => {
             </article>
             <article className='about__feedback'>
                 <div className='about__text'><h3>Our Customers&apos; Testimonials</h3></div>
-                <div className='about__clients'>
+                <div className='about__clients' ref={clients}>
                     {CARDS.map((el) => (
-                        <div className='about__card card' key={el.id}>
-                            <div className='card__photo'><img src={el.photo} alt="client" /></div>
-                            <span className='card__name'>{el.name}</span>
-                            <span className='card__text'>{el.text}</span>
-                            <div className='card__rating'>{el.rating}</div>
-                        </div>
+                        <Card key={el.id} el={el} />
                     ))}
                 </div>
             </article>

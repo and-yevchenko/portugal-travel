@@ -46,5 +46,12 @@ export const ABOUT = {
             photo: "/public/about/lisa-turner.jpg",
             rating: 5,
         },
+        {
+            id: 7,
+            name: "Minho Kim",
+            text: "It truly felt like a personalized experience from start to finish. I highly recommend them for anyone looking to explore Portugal in a unique and memorable way!",
+            photo: "/public/about/minho-kim.jpg",
+            rating: 5,
+        },
     ]
 }
