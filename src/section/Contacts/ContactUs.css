@@ -3,5 +3,99 @@
     .contacts-us__text {
         padding: 10rem 10rem 5rem 10rem;
     }
+}
 
+.form {
+    background-color: #FFF;
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    padding: 4rem 8rem;
+    border-top: 3px solid #034903;
+    border-bottom: 3px solid #034903;
+    .form__content {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        div {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+    }
+    .form__label {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #808080;
+        letter-spacing: 0.05rem;
+        line-height: 1.2;
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+    }
+    .form__email, .form__name {
+        padding: 1rem;
+        border: 2px solid #808080b0;
+        border-radius: 5px;
+        transition: all 0.5s ease-out;
+    }
+    .form__textarea {
+        resize: none;
+        width: 100%;
+        height: 300px;
+        border: 2px solid #808080b0;
+        padding: 1rem;
+        border-radius: 5px;
+        transition: all 0.5s ease-out;
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+        &::-webkit-scrollbar-thumb {
+            width: 8px;
+            border-radius: 5px;
+            background-color: #80808073;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+    }
+    input:focus,
+    textarea:focus {
+        border: 2px solid #034903;
+        transition: all 0.5s ease-out;
+    }
+    input:focus ~ label,
+    input:valid ~ label,
+    textarea:focus ~ label,
+    textarea:valid ~ label {
+        transition: all 0.3s ease-out;
+        top: 0;
+        transform: translateY(-50%);
+        font-size: 1rem;
+        padding: 0 0.5rem;
+        background-color: #FFF;
+        color: #034903;
+    }
+    input.--show:not(:valid), textarea.--show:not(:valid) {
+        border: 2px solid red;
+    }
+    .form__button {
+        width: max-content;
+        margin: 0 auto;
+        padding: 2rem 5rem;
+        background-color: #034903;
+        font-size: 1.3rem;
+        font-weight: 600;
+        letter-spacing: 0.1rem;
+        color: #fff;
+        &:hover {
+            background-color: #034903bd;
+        }
+        &:active {
+            transform: translateY(2px);
+        }
+    }
 }
