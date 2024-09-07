@@ -6,12 +6,12 @@
         background-color: #034903;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
         position: relative;
     }
     .footer__company {
         display: flex;
-        gap: 3rem;
+        gap: 6rem;
         align-items: center;
         .footer__name {
             color: #FFF;
@@ -22,9 +22,13 @@
         .footer__contacts {
             display: flex;
             flex-direction: column;
-            span {
+            * {
                 color: #FFF;
                 line-height: 1.5;
+                text-wrap: wrap;
+            }
+            a:hover {
+                text-decoration: underline;
             }
         }
     }
@@ -39,28 +43,32 @@
             }
         }
     }
+    .footer__social {
+        display: flex;
+        gap: 1rem;
+        a {
+            display: block;
+            font-size: 1rem;
+        }
+        img {
+            width: 1rem;
+            object-fit: contain;
+        }
+    }
     .footer__down {
         width: 100%;
         background-color: #FFF;
         padding: 1rem;
         p {
             color: #808080;
+            text-align: center;
         }
         a {
             color: #808080;
         }
-    }
-    .footer__logo {
-        height: 200px;
-        display: block;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        > * {
-            width: 100%;
-            height: 100%;
-            filter: drop-shadow(0 -5px 5px rgba(3,73,3,1));
+        img {
+            width: 1rem;
+            margin-left: 0.2rem;
         }
     }
 }
