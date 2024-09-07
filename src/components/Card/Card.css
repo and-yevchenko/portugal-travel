@@ -33,5 +33,7 @@
     }
     .card__rating {
         grid-area: rating;
+        display: flex;
+        gap: 0.5rem;
     }
 }
