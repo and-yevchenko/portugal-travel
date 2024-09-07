@@ -1,5 +1,6 @@
 .contact-us {
     background-color: #e5edee;
+    padding-bottom: 15rem;
     .contacts-us__text {
         padding: 10rem 10rem 5rem 10rem;
     }
@@ -91,7 +92,9 @@
         font-weight: 600;
         letter-spacing: 0.1rem;
         color: #fff;
+        transition: background-color 0.3s ease-out;
         &:hover {
+            transition: background-color 0.3s ease-out;
             background-color: #034903bd;
         }
         &:active {
