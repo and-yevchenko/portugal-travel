@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react"
-
+import './Card.css'
 
 export const Card = ({ el }) => {
 
