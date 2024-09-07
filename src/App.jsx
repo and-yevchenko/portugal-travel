@@ -1,6 +1,7 @@
 import './App.css'
 import { Footer } from './components/layout/Footer/Footer'
 import { Header } from './components/layout/Header/Header'
+import { Main } from './components/layout/Main/Main'
 import { Parallax } from './components/Parallax/Parallax'
 import { About } from './section/About/About'
 import { ContactUs } from './section/Contacts/ContactUs'
@@ -16,13 +17,13 @@ function App() {
       <Header>
         <Parallax />
       </Header>
-      <main className='main'>
+      <Main>
         <DiscoverPortugal />
         <TravelPlan />
         <FAQs />
         <About />
         <ContactUs />
-      </main>
+      </Main>
       <Footer />
     </div>
   )

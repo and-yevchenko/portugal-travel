@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import { Textbox } from '../../components/Textbox/Textbox'
 import { ABOUT } from '../../content/__about'
 import './About.css'
-import { Card } from './Card';
+import { Card } from '../../components/Card/Card';
 
 export const About = () => {
 

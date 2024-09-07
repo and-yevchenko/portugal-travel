@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react"
-
+import { Star } from 'lucide-react'
+import './Card.css'
 
 export const Card = ({ el }) => {
 
@@ -9,7 +9,11 @@ export const Card = ({ el }) => {
             <div className='card__info'>
                 <span className='card__name'>{el.name}</span>
                 <span className='card__text'>{el.text}</span>
-                <div className='card__rating'>{el.rating}</div>
+                <div className='card__rating'>
+                    {[...Array(el.rating)].map((_, index) => (
+                        <Star key={index} size={16} color='orange'/>
+                    ))}
+                </div>
             </div>
         </div>
     )
