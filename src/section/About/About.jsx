@@ -4,7 +4,7 @@ import { ABOUT } from '../../content/__about'
 import './About.css'
 import { Card } from '../../components/Card/Card';
 
-export const About = () => {
+export const About = ({ about }) => {
 
     const CONTENT = ABOUT;
     const CARDS = CONTENT.FEEDBACK
@@ -14,7 +14,6 @@ export const About = () => {
         const interval = setInterval(() => {
             const lastCard = clients.current.lastChild
             clients.current.prepend(lastCard)
-            console.log(clients.current);
         }, 5000)
     
         return () => clearInterval(interval)

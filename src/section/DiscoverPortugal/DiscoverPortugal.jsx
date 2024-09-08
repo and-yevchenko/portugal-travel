@@ -2,14 +2,13 @@ import { Textbox } from '../../components/Textbox/Textbox'
 import { DISCOVER_PORTUGAL } from '../../content/__discover-portugal'
 import './DiscoverPortugal.css'
 
-
-export const DiscoverPortugal = () => {
+export const DiscoverPortugal = ({ tour }) => {
 
     const CONTENT = DISCOVER_PORTUGAL
     const CONTENT_SWIPPER = CONTENT.CONTENT;
 
     return (
-        <section className='discover-portugal'>
+        <section className='discover-portugal' id='discover' ref={tour}>
             <article className='discover-portugal__title'>
                 <Textbox title={CONTENT.TITLE} text={CONTENT.TEXT}/>
             </article>

@@ -3,7 +3,7 @@ import { FAQS } from '../../content/__faqs'
 import './FAQs.css'
 import { Question } from './Question';
 
-export const FAQs = () => {
+export const FAQs = ({ faqs }) => {
 
     const CONTENT = FAQS;
     const QUESTIONS = CONTENT.QUESTIONS

@@ -3,7 +3,7 @@ import { Textbox } from '../../components/Textbox/Textbox'
 import { CONTACT_US } from '../../content/__contact-us'
 import './ContactUs.css'
 
-export const ContactUs = () => {
+export const ContactUs = ({ contact }) => {
 
     const CONTENT = CONTACT_US
 
