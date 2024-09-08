@@ -39,4 +39,9 @@
         transform-origin: left top;
       }
     }
+    .menu {
+      position: absolute;
+      top: 2.7rem;
+      left: 7rem;
+    }
 }
