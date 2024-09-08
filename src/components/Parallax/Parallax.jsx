@@ -3,7 +3,7 @@ import './Parallax.css'
 import { Mouse } from 'lucide-react'
 import { Title } from '../Title/Title'
 
-export const Parallax = () => {
+export const Parallax = ({ hookSmooth }) => {
 
     const [scrollValue, setScrollValue] = useState(window.scrollY)
     const parallax = useRef()
@@ -19,6 +19,8 @@ export const Parallax = () => {
       }
     }, [])
 
+    const ref = hookSmooth
+
     return (
         <div className='parallax' ref={parallax}>
           <div className='parallax__title'>
@@ -31,7 +33,9 @@ export const Parallax = () => {
           <div className='parallax__back'></div>
           <div className='parallax__middle'></div>
           <div className='parallax__front'></div>
-          <a href='#' className={`parallax__scroll${scrollValue > 300 ? ' --opacity' : ''}`}><Mouse /></a>
+          <a href='#discover' className={`parallax__scroll${scrollValue > 300 ? ' --opacity' : ''}`}
+            onClick={(e) => ref.runSmoothScroll(e, ref.refs.tour)}
+          ><Mouse /></a>
         </div>
     )
 }
