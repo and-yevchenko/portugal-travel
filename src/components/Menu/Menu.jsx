@@ -1,47 +1,48 @@
 import { AlignVerticalSpaceAround } from 'lucide-react'
 import './Menu.css'
 import { MENU_LINKS } from '../../content/__menu'
-import { useEffect, useRef, useState } from 'react'
+import { useMenu } from '../../hooks/useMenu'
 
 export const Menu = ({ hookSmooth }) => {
 
     const MENU = MENU_LINKS
 
-    const [isOpen, setIsOpen] = useState(false)
-    const handleClick = () => {
-        setIsOpen(!isOpen)
-    }
+    const hookMenu = useMenu()
+    // const [isOpen, setIsOpen] = useState(false)
+    // const handleClick = () => {
+    //     setIsOpen(!isOpen)
+    // }
 
     const ref = hookSmooth
-    const onClickMenu = (e, mark) => {
+    const handleClickLink = (e, mark) => {
         ref.runSmoothScroll(e, ref.refs[`${mark}`])
-        setIsOpen(false)
+        hookMenu.handleCloseMenu
     }
 
-    const refMenu = useRef(null)
-    const onClickOutside = (e) => {
-         if (refMenu.current && !refMenu.current.contains(e.target)) {
-            setIsOpen(false)
-         }
-    }
-    useEffect(() => {
-        document.addEventListener('mousedown', onClickOutside);
+    // const refMenu = useRef(null)
+    // const onClickOutside = (e) => {
+    //      if (refMenu.current && !refMenu.current.contains(e.target)) {
+    //         setIsOpen(false)
+    //      }
+    // }
+    // useEffect(() => {
+    //     document.addEventListener('mousedown', onClickOutside);
         
-        return () => {
-          document.removeEventListener('mousedown', onClickOutside);
-        };
-    }, []);
+    //     return () => {
+    //       document.removeEventListener('mousedown', onClickOutside);
+    //     };
+    // }, []);
 
     return (
-        <nav className='menu' ref={refMenu}>
-            <button className='menu__button' type='button' onClick={handleClick}>
+        <nav className='menu' ref={hookMenu.refMenu}>
+            <button className='menu__button' type='button' onClick={hookMenu.handleMenu}>
                 <AlignVerticalSpaceAround/>menu
             </button>
-            {isOpen &&
+            {hookMenu.isOpen &&
                 <ul className='menu__list'>
                     {MENU.map((el) => (
                         <li key={el.id}>
-                            <a href={el.link} onClick={(e) => onClickMenu(e, el.mark)}>{el.name}</a>
+                            <a href={el.link} onClick={(e) => handleClickLink(e, el.mark)}>{el.name}</a>
                         </li>
                     ))}
                 </ul>
