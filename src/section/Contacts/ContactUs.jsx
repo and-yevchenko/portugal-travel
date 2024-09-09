@@ -11,7 +11,7 @@ export const ContactUs = ({ contact }) => {
 
 
     return (
-        <section className='contact-us'>
+        <section className='contact-us' id='contact' ref={contact}>
             <article className='contacts-us__text'>
                 <Textbox title={CONTENT.TITLE} text={CONTENT.TEXT}/>
             </article>

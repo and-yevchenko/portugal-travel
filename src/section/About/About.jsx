@@ -20,7 +20,7 @@ export const About = ({ about }) => {
     }, [])
 
     return (
-        <section className='about'>
+        <section className='about' id='about' ref={about}>
             <article className='about__info'>
                 <Textbox title={CONTENT.TITLE} text={CONTENT.TEXT}/>
             </article>

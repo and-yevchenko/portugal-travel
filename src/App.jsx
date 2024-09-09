@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div id='app'>
-      <Header>
+      <Header hookSmooth={hookSmooth}>
         <Parallax hookSmooth={hookSmooth}/>
       </Header>
       <Main>
