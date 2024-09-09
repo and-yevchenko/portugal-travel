@@ -9,7 +9,7 @@ export const FAQs = ({ faqs }) => {
     const QUESTIONS = CONTENT.QUESTIONS
 
     return (
-        <section className='faqs'>
+        <section className='faqs' id='faqs' ref={faqs}>
             <article className='faqs__text'>
                 <Textbox title={CONTENT.TITLE} text={CONTENT.TEXT}/>
             </article>

@@ -8,7 +8,7 @@ export const DiscoverPortugal = ({ tour }) => {
     const CONTENT_SWIPPER = CONTENT.CONTENT;
 
     return (
-        <section className='discover-portugal' id='discover' ref={tour}>
+        <section className='discover-portugal' id='tour' ref={tour}>
             <article className='discover-portugal__title'>
                 <Textbox title={CONTENT.TITLE} text={CONTENT.TEXT}/>
             </article>

@@ -33,7 +33,7 @@ export const Parallax = ({ hookSmooth }) => {
           <div className='parallax__back'></div>
           <div className='parallax__middle'></div>
           <div className='parallax__front'></div>
-          <a href='#discover' className={`parallax__scroll${scrollValue > 300 ? ' --opacity' : ''}`}
+          <a href='#tour' className={`parallax__scroll${scrollValue > 300 ? ' --opacity' : ''}`}
             onClick={(e) => ref.runSmoothScroll(e, ref.refs.tour)}
           ><Mouse /></a>
         </div>
