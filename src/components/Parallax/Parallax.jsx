@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import './Parallax.css'
 import { Mouse } from 'lucide-react'
 import { Title } from '../Title/Title'
+import { ButtonUp } from '../ButtonUp/ButtonUp'
 
 export const Parallax = ({ hookSmooth }) => {
 
@@ -36,6 +37,9 @@ export const Parallax = ({ hookSmooth }) => {
           <a href='#tour' className={`parallax__scroll${scrollValue > 300 ? ' --opacity' : ''}`}
             onClick={(e) => ref.runSmoothScroll(e, ref.refs.tour)}
           ><Mouse /></a>
+          {scrollValue > 500 &&
+          <ButtonUp hookSmooth={hookSmooth}/>
+          }
         </div>
     )
 }

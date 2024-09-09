@@ -9,7 +9,7 @@ export const Footer = () => {
         <footer className='footer'>
             <div className='footer__up'>
                 <div className='footer__company'>
-                    <a className='footer__name' href="#">{INFO_FOOTER.NAME}</a>
+                    <a className='footer__name' href="/">{INFO_FOOTER.NAME}</a>
                     <div className='footer__contacts'>
                         <address>Address: {INFO_FOOTER.ADDRESS}</address>
                         <span>Phone: <a href={`tel:${INFO_FOOTER.PHONE}`}>{INFO_FOOTER.PHONE}</a></span>
