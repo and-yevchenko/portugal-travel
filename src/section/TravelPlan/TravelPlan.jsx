@@ -12,18 +12,20 @@ export const TravelPlan = () => {
 
     return (
         <section className='travel-plan'>
-            <article className='travel-plan__text'>
-                <Textbox title={content.TITLE} text={content.TEXT}/>
-            </article>
-            <article className='travel-plan__content'>
-                <div className='travel-plan__background'></div>
-                <div className='travel-plan__itinerary'>
-                    <Stepper currentStep={currentStep} setCurrentStep={setCurrentStep} />
-                </div>
-                <div className='travel-plan__map'>
-                    <MapPortugal currentStep={currentStep} />
-                </div>
-            </article>
+            <div className='travel-plan__container'>
+                <article className='travel-plan__text'>
+                    <Textbox title={content.TITLE} text={content.TEXT}/>
+                </article>
+                <article className='travel-plan__content'>
+                    <div className='travel-plan__background'></div>
+                    <div className='travel-plan__itinerary'>
+                        <Stepper currentStep={currentStep} setCurrentStep={setCurrentStep} />
+                    </div>
+                    <div className='travel-plan__map'>
+                        <MapPortugal currentStep={currentStep} />
+                    </div>
+                </article>
+            </div>
         </section>
     )
 }

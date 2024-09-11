@@ -8,30 +8,12 @@ export const Menu = ({ hookSmooth }) => {
     const MENU = MENU_LINKS
 
     const hookMenu = useMenu()
-    // const [isOpen, setIsOpen] = useState(false)
-    // const handleClick = () => {
-    //     setIsOpen(!isOpen)
-    // }
 
     const ref = hookSmooth
     const handleClickLink = (e, mark) => {
         ref.runSmoothScroll(e, ref.refs[`${mark}`])
         hookMenu.handleCloseMenu
     }
-
-    // const refMenu = useRef(null)
-    // const onClickOutside = (e) => {
-    //      if (refMenu.current && !refMenu.current.contains(e.target)) {
-    //         setIsOpen(false)
-    //      }
-    // }
-    // useEffect(() => {
-    //     document.addEventListener('mousedown', onClickOutside);
-        
-    //     return () => {
-    //       document.removeEventListener('mousedown', onClickOutside);
-    //     };
-    // }, []);
 
     return (
         <nav className='menu' ref={hookMenu.refMenu}>

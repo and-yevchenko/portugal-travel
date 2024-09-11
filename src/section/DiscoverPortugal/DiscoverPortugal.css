@@ -1,11 +1,13 @@
 .discover-portugal {
     .discover-portugal__title {
-        padding: 10rem 10rem 5rem 10rem;
+        padding: clamp(3rem, 12.5vw, 8rem) clamp(3rem, 12.5vw, 8rem) 5rem clamp(3rem, 12.5vw, 8rem);
         border-bottom: 3px solid #034903;
+        @media screen and (max-width: 424px) {
+            padding: 3rem 2rem;
+        }
     }
     .discover-portugal__item {
         overflow: hidden;
-        width: 100vw;
         height: 100vh;
         padding: 5rem;
         display: flex;
@@ -16,11 +18,21 @@
         * {
             flex: 1 1 50%;
         }
+        @media screen and (max-width: 1023px) {
+            flex-direction: column;
+            gap: 0;
+            padding: 0;
+        }
     }
     .discover-portugal__content {
         z-index: 1;
         max-width: 45%;
-        padding: 3rem;
+        padding: clamp(1rem, 4.6875vw, 3rem);
+        @media screen and (max-width: 1023px) {
+            max-width: 100%;
+            display: flex;
+            align-items: center;
+        }
     }
     .discover-portugal__image {
         position: absolute;
@@ -30,10 +42,13 @@
         height: 100%;
         object-fit: cover;
         transition: right 1s ease-out;
-        /* filter: contrast(150%) saturate(110%); */
         &:hover {
             right: 0;
             transition: right 1s ease-out;
+        }
+        @media screen and (max-width: 1023px) {
+            position: static;
+            order: 1;
         }
     }
 }

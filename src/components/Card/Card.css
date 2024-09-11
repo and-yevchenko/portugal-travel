@@ -9,6 +9,10 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+    @media screen and (max-width: 424px) {
+        flex-direction: column;
+        align-items: start;
+    }
     .card__info {
         display: flex;
         flex-direction: column;
@@ -17,8 +21,8 @@
     .card__photo {
         grid-area: photo;
         img {
-            height: 110px;
-            width: 110px;
+            height: 6.875rem;
+            width: 6.875rem;
             border-radius: 50%;
             object-fit: contain;
         }

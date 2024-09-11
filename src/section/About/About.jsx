@@ -21,17 +21,19 @@ export const About = ({ about }) => {
 
     return (
         <section className='about' id='about' ref={about}>
-            <article className='about__info'>
-                <Textbox title={CONTENT.TITLE} text={CONTENT.TEXT}/>
-            </article>
-            <article className='about__feedback'>
-                <div className='about__text'><h3>Our Customers&apos; Testimonials</h3></div>
-                <div className='about__clients' ref={clients}>
-                    {CARDS.map((el) => (
-                        <Card key={el.id} el={el} />
-                    ))}
-                </div>
-            </article>
+            <div className='about__container'>
+                <article className='about__info'>
+                    <Textbox title={CONTENT.TITLE} text={CONTENT.TEXT}/>
+                </article>
+                <article className='about__feedback'>
+                    <div className='about__text'><h3>Our Customers&apos; Testimonials</h3></div>
+                    <div className='about__clients' ref={clients}>
+                        {CARDS.map((el) => (
+                            <Card key={el.id} el={el} />
+                        ))}
+                    </div>
+                </article>
+            </div>
         </section>
     )
 }

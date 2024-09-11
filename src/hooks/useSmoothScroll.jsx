@@ -3,7 +3,6 @@ import { useRef } from "react"
 
 export const useSmoothScroll = () => {
 
-
     const refs = {
         home: useRef(null),
         tour: useRef(null),
