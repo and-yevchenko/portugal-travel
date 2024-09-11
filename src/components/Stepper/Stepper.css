@@ -1,14 +1,16 @@
 .stepper {
-    --heightStep: 52px;
     display: flex;
     flex-direction: column;
     gap: 2rem;
     margin: 0 auto;
     position: relative;
+    @media screen and (min-width: 1921px) {
+        gap: 4rem;
+    }
     .stepper__item {
         display: flex;
         align-items: center;
-        gap: 3rem;
+        gap: clamp(1rem, 8.72vw, 3rem);
         button {
             width: 18px;
             height: 18px;
@@ -35,9 +37,12 @@
             transition: all 0.4s ease-out;
         }
         p {
-            font-size: 1.2rem;
+            font-size: clamp(0.9rem, 3.5vw, 1.2rem);
             font-weight: 600;
             letter-spacing: 0.1rem;
+            @media screen and (min-width: 1921px) {
+                font-size: 2rem;
+            }
         }
     }
     

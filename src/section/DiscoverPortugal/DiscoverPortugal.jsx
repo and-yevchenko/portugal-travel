@@ -9,23 +9,25 @@ export const DiscoverPortugal = ({ tour }) => {
 
     return (
         <section className='discover-portugal' id='tour' ref={tour}>
-            <article className='discover-portugal__title'>
-                <Textbox title={CONTENT.TITLE} text={CONTENT.TEXT}/>
-            </article>
-            <article className='sticky-container'>
-                {CONTENT_SWIPPER.map((el) => (
-                    <div className='discover-portugal__item' key={el.id}
-                    style={{
-                        backgroundColor: el.background,
-                    }}
-                    >
-                        <div className='discover-portugal__content' style={{backgroundColor: `${el.background}`}}>
-                            <Textbox title={el.title} text={el.text} />
-                        </div>
-                        <img className='discover-portugal__image' src={el.img} alt={el.alt} />
+                <article className='discover-portugal__title'>
+                    <div className='discover-portugal__container'>
+                        <Textbox title={CONTENT.TITLE} text={CONTENT.TEXT}/>
                     </div>
-                ))}
-            </article>
+                </article>
+                <article className='sticky-container'>
+                    {CONTENT_SWIPPER.map((el) => (
+                        <div className='discover-portugal__item' key={el.id}
+                        style={{
+                            backgroundColor: el.background,
+                        }}
+                        >
+                            <div className='discover-portugal__content' style={{backgroundColor: `${el.background}`}}>
+                                <Textbox title={el.title} text={el.text} />
+                            </div>
+                            <img className='discover-portugal__image' src={el.img} alt={el.alt} />
+                        </div>
+                    ))}
+                </article>
         </section>
     )
 }

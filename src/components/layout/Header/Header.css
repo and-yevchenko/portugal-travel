@@ -1,6 +1,4 @@
 .header {
-    position: relative;
-    width: 100%;
     height: 100vh;
     .header__panel {
       width: 100%;
@@ -38,10 +36,18 @@
         transform: scale(1, 1);
         transform-origin: left top;
       }
+      @media screen and (max-width: 500px) {
+        display: none;
+      }
     }
     .menu {
       position: absolute;
       top: 2.7rem;
       left: 7rem;
+      @media screen and (max-width: 500px) {
+        left: auto;
+        right: 1rem;
+        position: static;
+      }
     }
 }

@@ -10,14 +10,16 @@ export const FAQs = ({ faqs }) => {
 
     return (
         <section className='faqs' id='faqs' ref={faqs}>
-            <article className='faqs__text'>
-                <Textbox title={CONTENT.TITLE} text={CONTENT.TEXT}/>
-            </article>
-            <article className='faqs__questions'>
-                {QUESTIONS.map((el) => (
-                    <Question key={el.id} el={el}/>
-                ))}
-            </article>
+            <div className='faqs__container'>
+                <article className='faqs__text'>
+                    <Textbox title={CONTENT.TITLE} text={CONTENT.TEXT}/>
+                </article>
+                <article className='faqs__questions'>
+                    {QUESTIONS.map((el) => (
+                        <Question key={el.id} el={el}/>
+                    ))}
+                </article>
+            </div>
         </section>
     )
 }
