@@ -1,20 +1,20 @@
 .textbox {
-    z-index: 1;
-    text-align: center;
-    .textbox__title {
-        font-size: clamp(1.5rem, 4.6875vw, 3rem);
-        font-weight: 700;
-        letter-spacing: 0.2rem;
-        color: #034903;
-        &:not(:last-child) {
-            margin-bottom: 2rem;
-        }
+  z-index: 1;
+  text-align: center;
+  .textbox__title {
+    font-size: clamp(1.5rem, 4.6875vw, 3rem);
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    color: #034903;
+    &:not(:last-child) {
+      margin-bottom: 2rem;
     }
-    .textbox__text {
-        font-size: clamp(1rem, 1.875vw, 1.2rem);
-        letter-spacing: 0.1rem;
-        @media screen and (min-width: 1921px) {
-            font-size: 2rem;
-        }
+  }
+  .textbox__text {
+    font-size: clamp(1rem, 1.875vw, 1.2rem);
+    letter-spacing: 0.1rem;
+    @media screen and (min-width: 1921px) {
+      font-size: 2rem;
     }
+  }
 }

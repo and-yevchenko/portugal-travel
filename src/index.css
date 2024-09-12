@@ -8,14 +8,14 @@
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
   width: 100%;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 100%;
   line-height: 1;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   text-size-adjust: 100%;
-  --max-width-container: 2560px; 
+  --max-width-container: 2560px;
 }
 
 * {
@@ -66,7 +66,7 @@ a:hover {
   text-decoration: none;
 }
 ul li {
-   list-style-type: none;
+  list-style-type: none;
 }
 img {
   vertical-align: top;
