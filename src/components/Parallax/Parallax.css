@@ -28,46 +28,46 @@
   }
   .parallax__full {
     z-index: 1;
-    background-image: url('./parallax/1K/full.png');
+    background-image: url('/public/parallax/1K/full.png');
     transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
     @media screen and (min-width: 2560px) {
-      background-image: url('./parallax/2K/full.png');
+      background-image: url('/public/parallax/2K/full.png');
     }
     @media screen and (min-width: 3840px) {
-      background-image: url('./parallax/4K/full.png');
+      background-image: url('/public/parallax/4K/full.png');
     }
   }
   .parallax__back {
     z-index: 2;
-    background-image: url('./parallax/1K/back.png');
+    background-image: url('/public/parallax/1K/back.png');
     transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
     @media screen and (min-width: 2560px) {
-      background-image: url('./parallax/2K/back.png');
+      background-image: url('/public/parallax/2K/back.png');
     }
     @media screen and (min-width: 3840px) {
-      background-image: url('./parallax/4K/back.png');
+      background-image: url('/public/parallax/4K/back.png');
     }
   }
   .parallax__middle {
     z-index: 3;
-    background-image: url('./parallax/1K/middle.png');
+    background-image: url('/public/parallax/1K/middle.png');
     transform: translate3d(0, calc(var(--scrollTop) / 4), 0);
     @media screen and (min-width: 2560px) {
-      background-image: url('./parallax/2K/middle.png');
+      background-image: url('/public/parallax/2K/middle.png');
     }
     @media screen and (min-width: 3840px) {
-      background-image: url('./parallax/4K/middle.png');
+      background-image: url('/public/parallax/4K/middle.png');
     }
   }
   .parallax__front {
     z-index: 4;
-    background-image: url('./parallax/1K/front.png');
+    background-image: url('/public/parallax/1K/front.png');
     transform: translate3d(0, calc(var(--scrollTop) / 5), 0);
     @media screen and (min-width: 2560px) {
-      background-image: url('./parallax/2K/front.png');
+      background-image: url('/public/parallax/2K/front.png');
     }
     @media screen and (min-width: 3840px) {
-      background-image: url('./parallax/4K/front.png');
+      background-image: url('/public/parallax/4K/front.png');
     }
   }
   .parallax__scroll {
