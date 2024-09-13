@@ -25,6 +25,7 @@
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
+    transition: transform 0.2s cubic-bezier(0.075, 0.5, 0, 1);
   }
   .parallax__full {
     z-index: 1;
