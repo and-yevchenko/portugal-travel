@@ -10,7 +10,7 @@ export const Header = ({ children, hookSmooth }) => {
     <header className="header" id="home" ref={ref.refs.home}>
       <div className="header__container">
         <div className="header__panel">
-          <a href="/">
+          <a href="./">
             <Logo />
           </a>
           <Menu hookSmooth={hookSmooth} />

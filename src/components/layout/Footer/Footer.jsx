@@ -8,7 +8,7 @@ export const Footer = () => {
     <footer className="footer">
       <div className="footer__up">
         <div className="footer__company">
-          <a className="footer__name" href="/">
+          <a className="footer__name" href="./">
             {INFO_FOOTER.NAME}
           </a>
           <div className="footer__contacts">
@@ -40,7 +40,7 @@ export const Footer = () => {
           © 2024 {INFO_FOOTER.NAME}.{' '}
           <a href="https://github.com/and-yevchenko" target="_blank">
             {INFO_FOOTER.AUTHOR}
-            <img src="/public/icons/github.svg" alt="GitHub" />
+            <img src="./icons/github.svg" alt="GitHub" />
           </a>
           . All rights reserved.
         </p>

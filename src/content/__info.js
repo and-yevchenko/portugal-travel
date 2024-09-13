@@ -9,22 +9,22 @@ export const INFO = {
     {
       id: 1,
       title: 'Facebook',
-      icon: '/public/icons/facebook.svg',
+      icon: './icons/facebook.svg',
     },
     {
       id: 2,
       title: 'Instagram',
-      icon: '/public/icons/instagram.svg',
+      icon: './icons/instagram.svg',
     },
     {
       id: 3,
       title: 'X',
-      icon: '/public/icons/x.svg',
+      icon: './icons/x.svg',
     },
     {
       id: 4,
       title: 'LinkedIn',
-      icon: '/public/icons/linkedin.svg',
+      icon: './icons/linkedin.svg',
     },
   ],
 };
