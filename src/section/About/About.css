@@ -71,6 +71,9 @@
   min-height: 7.8125rem;
   position: absolute;
   transition: all 1.5s ease-out;
+  &:nth-child(n) {
+    transition: all 1.5s ease-out;
+  }
   &:nth-child(1) {
     top: 0;
     transform: translateX(5rem);
