@@ -19,7 +19,6 @@
     gap: 1rem;
   }
   .card__photo {
-    grid-area: photo;
     img {
       height: 6.875rem;
       width: 6.875rem;
@@ -28,15 +27,12 @@
     }
   }
   .card__name {
-    grid-area: name;
     font-weight: 500;
   }
   .card__text {
-    grid-area: text;
     display: inline-block;
   }
   .card__rating {
-    grid-area: rating;
     display: flex;
     gap: 0.5rem;
   }

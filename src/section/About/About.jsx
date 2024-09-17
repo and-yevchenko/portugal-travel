@@ -29,8 +29,8 @@ export const About = ({ about }) => {
             <h3>Our Customers&apos; Testimonials</h3>
           </div>
           <div className="about__clients" ref={clients}>
-            {CARDS.map((el) => (
-              <Card key={el.id} el={el} />
+            {CARDS.map((card) => (
+              <Card key={card.id} card={card} />
             ))}
           </div>
         </article>
