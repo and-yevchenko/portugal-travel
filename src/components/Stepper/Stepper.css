@@ -36,10 +36,15 @@
             height: 70%;
             transition: all 0.4s ease-out;
         }
-        p {
+        label {
+            cursor: pointer;
             font-size: clamp(0.9rem, 3.5vw, 1.2rem);
             font-weight: 600;
             letter-spacing: 0.1rem;
+            transition: all 0.4s ease-out;
+            &:hover {
+                transform: translateY(2px);
+            }
             @media screen and (min-width: 1921px) {
                 font-size: 2rem;
             }
@@ -49,6 +54,10 @@
     .stepper__item.--active {
         button {
             background-color: #c50505;
+            transition: all 0.4s ease-out;
+        }
+        label {
+            color: #700303;
             transition: all 0.4s ease-out;
         }
     }

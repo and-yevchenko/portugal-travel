@@ -14,8 +14,9 @@ export const Stepper = ({ currentStep, setCurrentStep }) => {
                     <button
                         onClick={() => setCurrentStep(i + 1)}
                         type="button"
+                        id={`button-${i}`}
                     ></button>
-                    <p>{step}</p>
+                    <label htmlFor={`button-${i}`}>{step}</label>
                 </div>
             ))}
         </div>
