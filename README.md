@@ -24,15 +24,16 @@ One of the most challenging aspects of implementation and responsiveness on this
 
 ```javascript
 const clients = useRef();
-  useEffect(() => {
+useEffect(() => {
     const interval = setInterval(() => {
-      const lastCard = clients.current.lastChild;
-      clients.current.prepend(lastCard);
+        const lastCard = clients.current.lastChild;
+        clients.current.prepend(lastCard);
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [])
-  ```
+}, []);
+```
+
 However, it’s worth noting that it can also work well by swapping classes or attributes and using `order`. The main to this slider is the `absolute` positioning of the cards and moving them with `top`, `left`, `bottom`, `right`, and/or `transform`.
 
 **Feedback Form**: A user-friendly feedback form is included for visitors to easily contact the company, featuring input validation and error handling to ensure a smooth experience.
@@ -41,21 +42,26 @@ The form does not use any third-party libraries and was given limited developmen
 **Adaptive Design**: The landing page is fully adaptive, ensuring that it is responsive and optimized for viewing on all devices, from desktops to tablets and smartphones.
 
 ## 📚 What I Learned?
+
 I worked with **React** and styling, and discovered some UI solutions to enhance the usability of the website.
 **`useState, useEffect, useContext, useRef`:** I got experience in using the most popular hooks, understood the logic of work and the potential for their use, I found some life hacks for myself when working with them. I also wrote several custom hooks.
 
 ## 📈 Overall Growth:
+
 This project sharpened my ability to tackle complex challenges, introduced me to new tools and techniques, and significantly enhanced my skills for future work. It provided me with valuable hands-on experience in programming, allowing me to grow as a developer.
 
 ## ⭐ How can it be improved?
-- Improve form validation  
-- Change the initial parallax image to a more attractive one  
-- Make the sticky slider scroll through one full slide at a time  
+
+-   Improve form validation
+-   Change the initial parallax image to a more attractive one
+-   Make the sticky slider scroll through one full slide at a time
 
 ## 🏃‍♂️ Running the Project
+
 1. Clone the repository to your local machine.
 2. Run `npm install` or `yarn` in the project directory to install the required dependencies.
 3. Run `npm run dev` or `yarn dev` to get the project started.
 
 ## 😍 Performance
+
 ![preview](public/preview/full-website.jpeg)

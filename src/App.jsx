@@ -11,23 +11,23 @@ import { FAQs } from './section/FAQs/FAQs';
 import { TravelPlan } from './section/TravelPlan/TravelPlan';
 
 function App() {
-  const hookSmooth = useSmoothScroll();
+    const hookSmooth = useSmoothScroll();
 
-  return (
-    <div id="app">
-      <Header hookSmooth={hookSmooth}>
-        <Parallax hookSmooth={hookSmooth} />
-      </Header>
-      <Main>
-        <DiscoverPortugal tour={hookSmooth.refs.tour} />
-        <TravelPlan />
-        <FAQs faqs={hookSmooth.refs.faqs} />
-        <About about={hookSmooth.refs.about} />
-        <ContactUs contact={hookSmooth.refs.contact} />
-      </Main>
-      <Footer />
-    </div>
-  );
+    return (
+        <div id="app">
+            <Header hookSmooth={hookSmooth}>
+                <Parallax hookSmooth={hookSmooth} />
+            </Header>
+            <Main>
+                <DiscoverPortugal tour={hookSmooth.refs.tour} />
+                <TravelPlan />
+                <FAQs faqs={hookSmooth.refs.faqs} />
+                <About about={hookSmooth.refs.about} />
+                <ContactUs contact={hookSmooth.refs.contact} />
+            </Main>
+            <Footer />
+        </div>
+    );
 }
 
 export default App;

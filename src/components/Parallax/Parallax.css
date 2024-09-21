@@ -1,97 +1,97 @@
 .parallax {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  place-content: center;
-  .parallax__title {
-    display: block;
-    z-index: 2;
-    text-align: center;
-    position: absolute;
-    inset: 20% 0 0 0;
-    transform: translateY(calc(var(--scrollTop) / 1.3));
-    transition: transform 0.2s cubic-bezier(0.075, 0.5, 0, 1);
-  }
-  .parallax__full,
-  .parallax__back,
-  .parallax__middle,
-  .parallax__front {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    transition: transform 0.2s cubic-bezier(0.075, 0.5, 0, 1);
-  }
-  .parallax__full {
-    z-index: 1;
-    background-image: url('/public/parallax/1K/full.png');
-    transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
-    @media screen and (min-width: 2560px) {
-      background-image: url('/public/parallax/2K/full.png');
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    place-content: center;
+    .parallax__title {
+        display: block;
+        z-index: 2;
+        text-align: center;
+        position: absolute;
+        inset: 20% 0 0 0;
+        transform: translateY(calc(var(--scrollTop) / 1.3));
+        transition: transform 0.2s cubic-bezier(0.075, 0.5, 0, 1);
     }
-    @media screen and (min-width: 3840px) {
-      background-image: url('/public/parallax/4K/full.png');
+    .parallax__full,
+    .parallax__back,
+    .parallax__middle,
+    .parallax__front {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        transition: transform 0.2s cubic-bezier(0.075, 0.5, 0, 1);
     }
-  }
-  .parallax__back {
-    z-index: 2;
-    background-image: url('/public/parallax/1K/back.png');
-    transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
-    @media screen and (min-width: 2560px) {
-      background-image: url('/public/parallax/2K/back.png');
+    .parallax__full {
+        z-index: 1;
+        background-image: url('/public/parallax/1K/full.png');
+        transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
+        @media screen and (min-width: 2560px) {
+            background-image: url('/public/parallax/2K/full.png');
+        }
+        @media screen and (min-width: 3840px) {
+            background-image: url('/public/parallax/4K/full.png');
+        }
     }
-    @media screen and (min-width: 3840px) {
-      background-image: url('/public/parallax/4K/back.png');
+    .parallax__back {
+        z-index: 2;
+        background-image: url('/public/parallax/1K/back.png');
+        transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
+        @media screen and (min-width: 2560px) {
+            background-image: url('/public/parallax/2K/back.png');
+        }
+        @media screen and (min-width: 3840px) {
+            background-image: url('/public/parallax/4K/back.png');
+        }
     }
-  }
-  .parallax__middle {
-    z-index: 3;
-    background-image: url('/public/parallax/1K/middle.png');
-    transform: translate3d(0, calc(var(--scrollTop) / 4), 0);
-    @media screen and (min-width: 2560px) {
-      background-image: url('/public/parallax/2K/middle.png');
+    .parallax__middle {
+        z-index: 3;
+        background-image: url('/public/parallax/1K/middle.png');
+        transform: translate3d(0, calc(var(--scrollTop) / 4), 0);
+        @media screen and (min-width: 2560px) {
+            background-image: url('/public/parallax/2K/middle.png');
+        }
+        @media screen and (min-width: 3840px) {
+            background-image: url('/public/parallax/4K/middle.png');
+        }
     }
-    @media screen and (min-width: 3840px) {
-      background-image: url('/public/parallax/4K/middle.png');
+    .parallax__front {
+        z-index: 4;
+        background-image: url('/public/parallax/1K/front.png');
+        transform: translate3d(0, calc(var(--scrollTop) / 5), 0);
+        @media screen and (min-width: 2560px) {
+            background-image: url('/public/parallax/2K/front.png');
+        }
+        @media screen and (min-width: 3840px) {
+            background-image: url('/public/parallax/4K/front.png');
+        }
     }
-  }
-  .parallax__front {
-    z-index: 4;
-    background-image: url('/public/parallax/1K/front.png');
-    transform: translate3d(0, calc(var(--scrollTop) / 5), 0);
-    @media screen and (min-width: 2560px) {
-      background-image: url('/public/parallax/2K/front.png');
+    .parallax__scroll {
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        text-align: center;
+        transition: all 0.3s ease-out;
+        &:hover {
+            bottom: 1.5rem;
+            transition: bottom 0.3s ease-out;
+        }
+        > * {
+            color: #fff;
+            height: 50px;
+            width: 50px;
+        }
+        &.--opacity {
+            opacity: 0;
+            transition: opacity 0.3s ease-out;
+        }
     }
-    @media screen and (min-width: 3840px) {
-      background-image: url('/public/parallax/4K/front.png');
-    }
-  }
-  .parallax__scroll {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
-    text-align: center;
-    transition: all 0.3s ease-out;
-    &:hover {
-      bottom: 1.5rem;
-      transition: bottom 0.3s ease-out;
-    }
-    > * {
-      color: #fff;
-      height: 50px;
-      width: 50px;
-    }
-    &.--opacity {
-      opacity: 0;
-      transition: opacity 0.3s ease-out;
-    }
-  }
 }
